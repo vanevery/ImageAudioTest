@@ -31,17 +31,17 @@ public class MainActivity extends Activity {
 		//imageView.setImageResource(R.drawable.test);
 		
 		// From the Assets Folder
-//		try {
-//			InputStream is = this.getAssets().open("test.png");
-//			Bitmap bm = BitmapFactory.decodeStream(is);
-//			imageView.setImageBitmap(bm);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			InputStream is = this.getAssets().open("test.png");
+			Bitmap bm = BitmapFactory.decodeStream(is);
+			imageView.setImageBitmap(bm);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		// From the SD Card
-		Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageState() + "/test.png");
-		imageView.setImageBitmap(bm);
+		//Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/test.png");
+		//imageView.setImageBitmap(bm);
 	}
 
 	@Override
