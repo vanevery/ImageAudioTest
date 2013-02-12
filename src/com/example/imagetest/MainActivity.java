@@ -43,16 +43,9 @@ public class MainActivity extends Activity {
 		//Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/test.png");
 		//imageView.setImageBitmap(bm);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
 	
 	public void buttonClicked(View v) {
-		Uri data = Uri.parse(Environment.getExternalStorageDirectory() + "/myfavoritepicture.mp3");
+		Uri data = Uri.parse("file:///" + Environment.getExternalStorageDirectory() + "/myfavoritepicture.mp3");
 		Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
 		intent.setDataAndType(data, "audio/mp3");
 		startActivity(intent);
